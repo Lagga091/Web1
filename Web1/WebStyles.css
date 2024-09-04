@@ -1,0 +1,269 @@
+/* Importing Google Fonts: 'Poppins' */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.section_title  h2 {
+    padding-top: 6.5rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Header section */
+
+header {
+    position: fixed;
+    margin: auto;
+    max-width: 1440px;
+    width: 100%;
+    background-color: #454545;
+    z-index: 5;
+}
+
+.navbar {
+    height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 900;
+    transition: 0.2s ease-in-out;
+}
+
+.navbar .logo a:hover {
+    color: #ccc;
+    font-size: 1.55rem;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin-left: 2.5rem;
+}
+
+.menu ul li a {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+
+.menu ul li a:hover {
+    color: #ccc;
+    font-size: 1.15rem;
+}
+
+@media screen and (max-width: 660px) {
+    .menu {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Homepage section */
+
+#home {
+    height: 100vh;
+    max-width: 1440px;
+    width: 100%;
+    position: absolute;
+    background: url(Images/1.jpg);
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+.home .content {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 15rem;
+    color: #fff;
+    z-index: 4;
+}
+
+.home .content h2 {
+    margin-bottom: 2rem;
+    font-size: 1.65rem;
+}
+
+.home .content p {
+    padding-top: 10px;
+    font-size: 1.2rem;
+}
+
+.btn {
+    margin-top: 3rem;
+    padding: 0.75rem 1.2rem;
+    border: none;
+    outline: none;
+    z-index: 3;
+}
+
+.btn a {
+    width: 92px;
+    color: #000;
+    padding: 0.75rem 1.2rem;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.btn a:hover {
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 660px) {
+    .home .content {
+        padding-top: 10rem;
+    }
+
+    .home .content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .home .content p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .home .content {
+        padding-top: 12rem;
+    }
+}
+
+/* Services section */
+
+.services {
+    top: 650px;
+    left: 0;
+    min-height: 100vh;
+    max-width: 1440px;
+    width: 100%;
+    position: absolute;
+}
+
+.services .content {
+    padding: 0 5rem;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 5rem 10px;
+}
+
+.card {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: calc(1200px / 3 - 50px);
+    height: 400px;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cards .card img {
+    aspect-ratio: 4 / 3;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.cards .card h3 {
+    margin-top: 2rem;
+}
+
+@media screen and (min-height: 768px) {
+    .services {
+        top: 900px;
+    }
+}
+
+@media screen and (min-height: 1024px) {
+    .services {
+        top: 1050px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cards {
+        padding: 5rem 0;
+    }
+
+    .cards .card {
+        max-width: 300px;
+        max-height: 350px;
+    }
+}
